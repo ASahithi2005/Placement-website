@@ -15,6 +15,12 @@ const messages = [
     designation: "Placement Coordinator",
     content: "Our goal is to bridge the gap between students and industry...",
     image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"
+  },
+  {
+    name: "Prof. Jane Smith",
+    designation: "Principal",
+    content: "Our goal is to bridge the gap between students and industry...",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Placeholder_Person.jpg"
   }
 ];
 

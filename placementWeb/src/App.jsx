@@ -17,11 +17,7 @@ import Timeline from "./components/Timeline";
 function App() {
   return (
     <>
-
-     Hello world
-     this is the first page
-     This is the first change!
-
+    
      <MessagesSection />
      <Header/>
      <Timeline />
