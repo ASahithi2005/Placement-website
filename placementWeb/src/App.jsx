@@ -23,8 +23,7 @@ function App() {
      This is the first change!
 
      <MessagesSection />
-
-    <Header/>
+     <Header/>
      <Timeline />
 
     </>
