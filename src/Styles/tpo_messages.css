@@ -1,71 +1,141 @@
+/* Section styling */
 .messages-section {
-    padding: 4rem 0;
-    text-align: center;
-    /* background: linear-gradient(to right, #3b82f6, #6366f1); */
-    color: white;
-  }
-  
-  .messages-heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
-  }
-  
-  .carousel-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .message-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .message-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .message-image {
-    width: 150px; /* Ensure a square shape */
-    height: 150px; /* Equal width and height for a perfect circle */
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Ensures it fills the circle without stretching */
-    display: block; /* Prevents extra spacing */
-    border: 3px solid #6366f1;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1rem;
+  padding: 4rem 1rem;
+  text-align: center;
+  color: white;
+  background-color: #1f2937;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-  
+.messages-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+/* Center carousel */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Center each slide content */
+.carousel .slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* Message card */
+.message-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+
+.message-card:hover {
+  transform: scale(1.03);
+}
+
+/* Image styling */
+.message-image-container {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #6366f1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Text styling */
+.message-text {
+  text-align: left;
+  width: 100%;
+}
+
+.message-name {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #3730a3;
+  margin-bottom: 0.25rem;
+}
+
+.message-designation {
+  font-size: 1rem;
+  font-style: italic;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.message-content {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .message-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
   .message-text {
     text-align: center;
   }
-  
+
+  .message-image {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  .messages-heading {
+    font-size: 2rem;
+  }
+
+  .message-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .message-card {
+    padding: 1.5rem 1rem;
+  }
+
   .message-name {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #3730a3;
   }
-  
-  .message-designation {
-    font-size: 1rem;
-    font-style: italic;
-    color: #4b5563;
-  }
-  
+
   .message-content {
-    font-size: 1rem;
-    color: #374151;
-    margin-top: 0.5rem;
-    max-width: 500px;
-    line-height: 1.5;
+    font-size: 0.95rem;
   }
-  
+}

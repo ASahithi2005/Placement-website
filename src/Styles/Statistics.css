@@ -1,9 +1,18 @@
 .stats-section {
   padding: 40px 20px;
-  background-color: #ffffff;
+  background: linear-gradient(135deg, #e0f2ff, #467fb1);
   text-align: center;
 }
 
+.stats-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  line-height: 1.1;
+}
+
+/* Flex container - column by default */
 .stats-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +20,7 @@
   gap: 30px;
 }
 
+/* Stat item styling */
 .stat-item {
   width: 90%;
   max-width: 800px;
@@ -31,38 +41,83 @@
   object-fit: cover;
 }
 
-/* Responsive for tablets */
-@media (max-width: 768px) {
-  .stat-item {
-    height: 300px;
-  }
-}
-
-/* Responsive for small screens */
-@media (max-width: 480px) {
-  .stat-item {
-    height: 220px;
-    width: 100%;
-    border-radius: 10px;
-  }
-}
-/* Centering the More Info button */
+/* Button container */
 .more-info-container {
   text-align: center;
-  margin-top: 20px; /* Adjust for spacing */
+  margin-top: 20px;
 }
 
 .more-info-button {
-  background-color: #007bff; /* Button color */
+  background-color: #007bff;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
 }
 
 .more-info-button:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
 }
 
+/* Responsive adjustments */
+
+/* Tablets (max-width 1024px) */
+@media (max-width: 1024px) {
+  .stat-item {
+    height: 350px;
+    max-width: 700px;
+  }
+
+  .stats-title {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Small tablets and large phones (max-width 768px) */
+@media (max-width: 768px) {
+  .stat-item {
+    height: 300px;
+    max-width: 90%;
+  }
+
+  .stats-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .more-info-button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Mobile phones (max-width 480px) */
+@media (max-width: 480px) {
+  .stat-item {
+    height: 220px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .stats-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    padding: 0 10px; /* padding so title doesn't touch edges */
+  }
+
+  .more-info-button {
+    width: 80%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+
+  /* Stack stats container items with spacing */
+  .stats-container {
+    gap: 20px;
+  }
+}

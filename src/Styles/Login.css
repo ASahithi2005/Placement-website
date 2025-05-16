@@ -1,48 +1,48 @@
-.login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(0,0,0,0.15);
-    text-align: center;
-  }
-  
-  .login-form input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-  }
-  
-  .login-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #1976d2;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 8px;
+  .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+    
+    .login-form input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    
+    .login-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1976d2;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+    .login-form button:hover {
+      background-color: #125ea6;
+    }
+    .login-page {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f8f9fa; /* optional: adds a subtle background */
+    }
+    .toggle-link {
+    color: #007bff;
     cursor: pointer;
+    text-decoration: underline;
   }
-  
-  .login-form button:hover {
-    background-color: #125ea6;
-  }
-  .login-page {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f9fa; /* optional: adds a subtle background */
-  }
-  .toggle-link {
-  color: #007bff;
-  cursor: pointer;
-  text-decoration: underline;
-}
 
-  
-  
+    
+    

@@ -2,50 +2,85 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white; /* Matches your color scheme */
-    padding: 50px 0;
-  }
-  
-  .tpo-content {
+    background: linear-gradient(135deg, #e0f2ff, #467fb1);
+    padding: 3rem 2vw;
+    box-sizing: border-box;
+}
+
+.tpo-content {
     display: flex;
     max-width: 1100px;
     width: 90%;
     align-items: center;
-    gap: 40px;
-  }
-  
-  .tpo-image img {
+    justify-content: center;
+    gap: clamp(1rem, 4vw, 2.5rem);
+    flex-wrap: wrap;
+}
+
+.tpo-image,
+.tpo-info {
+    flex: 1 1 45%;
+    min-width: 280px;
+    max-width: 90%;
+}
+
+.tpo-image img {
     width: 100%;
-    max-width: 500px;
+    height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-  }
-  
-  .tpo-info {
-    color:rgb(93, 0, 255);
-    max-width: 500px;
-  }
-  
-  .tpo-info h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #fa3415; /* Gold color for highlight */
-  }
-  
-  .tpo-info p {
-    font-size: 18px;
+    display: block;
+}
+
+.tpo-info {
+    color: rgb(13, 5, 27);
+    text-align: left;
+}
+
+.tpo-info h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.tpo-info p {
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
     line-height: 1.6;
     margin-bottom: 10px;
-  }
-  
-  @media (max-width: 900px) {
+}
+
+/* Tablet and medium screens */
+@media (max-width: 900px) {
     .tpo-content {
-      flex-direction: column;
-      text-align: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-  
-    .tpo-image img {
-      max-width: 100%;
+
+    .tpo-image,
+    .tpo-info {
+        max-width: 100%;
+        min-width: auto;
+        flex: 1 1 100%;
     }
-  }
-  
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .tpo-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .tpo-info h2 {
+        font-size: 1.5rem;
+    }
+
+    .tpo-info p {
+        font-size: 0.875rem;
+    }
+
+    .tpo-content {
+        gap: 1rem;
+    }
+}

@@ -13,10 +13,13 @@ const Header = () => {
     <header className="header">
       <div className="container">
         {/* Logo - Routes to homepage */}
-        <RouterLink to="/" className="logo">
+        <div className="logo">
+         <a href="https://uceou.edu/" target="_blank" rel="noopener noreferrer">
           <img src={logo} alt="UCEOU Logo" className="logo-img" />
+          </a>
+
           <span className="logo-text">Training & Placement Office</span>
-        </RouterLink>
+        </div>
 
         {/* Desktop Menu */}
         <nav className="nav">

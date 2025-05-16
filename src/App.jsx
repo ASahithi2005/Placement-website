@@ -29,8 +29,8 @@ function App() {
             <Footer/>
           </>
         } />
-        <Route path="/student-login" element={<StudentLogin />} />
-        <Route path="/recruiter-login" element={<RecruiterLogin />} />
+        {/* <Route path="/student-login" element={<StudentLogin />} />
+        <Route path="/recruiter-login" element={<RecruiterLogin />} /> */}
       </Routes>
     </Router>
   );
