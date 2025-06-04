@@ -1,159 +1,249 @@
-/* Banner Carousel Slide Container */
-.banner-container {
-  position: relative;
+.home-banner-wrapper {
   width: 100%;
-  height: 50vh; /* You can adjust if needed */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+.slide-container {
+  position: relative;
+  height: 90vh;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  margin-top: 40px; /* Increased to push it down */
-  max-height: 750px;
+  background: #f0f5ff; /* Light blue background for image slides */
 }
 
-/* Banner Background Video */
-.banner-video {
-  position: absolute;
-  top: 0;
-  left: 0;
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  display: block;
 }
 
-/* Overlay for Video */
+/* Centered Image Styling */
+.centered-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Overlay Styles */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Makes text readable over video */
 }
 
-/* Text Content Layer */
+.dark-overlay {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.blue-overlay {
+  background: rgba(0, 102, 204, 0.2);
+}
+
+/* Content Styling */
 .banner-content {
-  position: relative;
-  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
   text-align: center;
-  z-index: 2;
-  padding: 0 20px; /* Padding for smaller screens */
-  max-width: 900px; /* Limit width on large screens */
-  margin: 0 auto;
-}
-
-/* Title Styling */
-.banner-title {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1.1;
-}
-
-/* Highlighted Text */
-.highlight {
-  color: #4a90e2;
-}
-
-/* Subtitle Text */
-.banner-text {
-  font-size: 1.2rem;
-  margin-top: 10px;
-  line-height: 1.4;
-}
-
-/* Buttons Container */
-.banner-buttons {
-  margin-top: 20px;
-}
-
-/* Button Styling */
-.btn {
-  background-color: #4a90e2;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 1rem;
+  z-index: 2;
+  padding: 20px;
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  line-height: 1.2;
+}
+
+.image-slide-title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.image-slide-text {
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.highlight {
+  color: #4da6ff;
+  font-weight: 800;
+}
+
+.banner-text {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+}
+
+/* Buttons */
+.banner-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  transition: all 0.4s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.btn:hover {
-  background-color: #357ab7;
+.student-btn {
+  background-color: #0066cc;
+  color: white;
+  border: 2px solid #0066cc;
 }
 
-/* Responsive Adjustments */
+.student-btn:hover {
+  background-color: #004d99;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 102, 204, 0.5);
+}
 
-/* Medium devices (tablets, 768px and up) */
-@media (max-width: 1024px) {
-  .banner-container {
-    height: 60vh;
-    margin-top: 80px;
+.recruiter-btn {
+  background-color: white;
+  color: #0066cc;
+  border: 2px solid white;
+}
+
+.recruiter-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Dots Styling */
+.slick-dots {
+  bottom: 40px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4da6ff;
+}
+
+/* Responsive Design */
+@media (max-width: 810px) {
+  .home-banner-wrapper {
+    margin-top: 82px;
+  }
+
+  .slide-container {
+    height: 70vh;
+    min-height: 500px;
   }
   
   .banner-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   
-  .banner-text {
-    font-size: 1.1rem;
+  .image-slide-title {
+    font-size: 2.2rem;
   }
   
-  .btn {
-    padding: 9px 18px;
-    font-size: 0.95rem;
-    margin: 8px;
+  .image-slide-text {
+    font-size: 1.3rem;
   }
 }
 
-/* Small devices (phones, less than 768px) */
-@media (max-width: 767px) {
-  .banner-container {
-    height: 50vh;
-    margin-top: 60px;
+@media (max-width: 768px) {
+  .home-banner-wrapper {
+    margin-top: 82px;
   }
 
+  .slide-container {
+    height: 60vh;
+    min-height: 400px;
+  }
+  
+  .banner-title {
+    font-size: 2.2rem;
+  }
+  
+  .image-slide-title {
+    font-size: 1.8rem;
+  }
+  
+  .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-banner-wrapper {
+    margin-top: 82px;
+  }
+
+  .slide-container {
+    height: 70vh;
+    min-height: 350px;
+  }
+  
   .banner-title {
     font-size: 1.8rem;
   }
   
-  .banner-text {
-    font-size: 1rem;
+  .image-slide-title {
+    font-size: 1.5rem;
+  }
+  
+  .image-slide-text {
+    font-size: 1.1rem;
   }
   
   .banner-buttons {
-    display: flex;
     flex-direction: column;
-    gap: 12px;
     align-items: center;
-  }
-  
-  .btn {
-    width: 80%;
-    padding: 12px 0;
-    font-size: 1.1rem;
-    margin: 6px 0;
-  }
-}
-
-/* Extra large screens (1600px and up) */
-@media (min-width: 1600px) {
-  .banner-container {
-    height: 90vh;
-  }
-  
-  .banner-title {
-    font-size: 4rem;
-  }
-  
-  .banner-text {
-    font-size: 1.4rem;
-  }
-  
-  .btn {
-    font-size: 1.1rem;
-    padding: 12px 28px;
+    gap: 12px;
   }
 }

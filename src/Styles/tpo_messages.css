@@ -1,11 +1,11 @@
-/* Section styling */
 .messages-section {
-  padding: 4rem 1rem;
+  padding: 4rem 1rem 5rem;
   text-align: center;
   color: white;
   background-color: #1f2937;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .messages-heading {
@@ -15,16 +15,16 @@
   margin-bottom: 3rem;
 }
 
-/* Center carousel */
 .carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* Center each slide content */
 .carousel .slide {
   display: flex !important;
   justify-content: center;
@@ -34,7 +34,6 @@
   padding: 1rem;
 }
 
-/* Message card */
 .message-card {
   background: white;
   padding: 2rem;
@@ -44,9 +43,8 @@
   align-items: center;
   flex-direction: row;
   gap: 2rem;
-  max-width: 100%;
-  width: 100%;
-  max-width: 900px;
+  width: 75%;
+  max-width: 90%;
   margin: 0 auto;
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
@@ -56,7 +54,6 @@
   transform: scale(1.03);
 }
 
-/* Image styling */
 .message-image-container {
   flex-shrink: 0;
   display: flex;
@@ -73,7 +70,6 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Text styling */
 .message-text {
   text-align: left;
   width: 100%;
@@ -99,12 +95,12 @@
   line-height: 1.6;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .message-card {
     flex-direction: column;
     text-align: center;
     padding: 2rem 1.5rem;
+    max-width: 90%;
   }
 
   .message-text {
@@ -129,13 +125,54 @@
 
   .message-card {
     padding: 1.5rem 1rem;
+    max-width: 100%;
+    gap: 1rem;
   }
 
   .message-name {
     font-size: 1.5rem;
   }
-
   .message-content {
     font-size: 0.95rem;
   }
+}
+
+@media (max-width: 500px) {
+  .message-card {
+    width: 70%;
+    max-width: 80%;
+    padding: 1rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .message-image {
+    width: 80px;
+    height: 80px;
+  }
+  .messages-section {
+    padding: 2rem 0.5rem 3rem;
+  }
+}
+
+.carousel-container .carousel .control-dots {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.carousel-container .carousel {
+  padding-bottom: 40px;
+}
+
+.carousel-container .carousel .control-dots .dot {
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0.8;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+}
+
+.carousel-container .carousel .control-dots .dot.selected {
+  background: white;
+  opacity: 1;
 }

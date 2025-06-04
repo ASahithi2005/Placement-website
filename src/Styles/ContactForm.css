@@ -1,0 +1,126 @@
+.contact-section {
+    background: linear-gradient(225deg, #467fb1, #e0f2ff);
+    padding: 30px 0;
+}
+
+.contact-card {
+    margin: 40px auto;
+    background: #f5f9fb;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px 30px;
+    max-width: 60%;
+    width: 100%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 2rem;
+    color: #0173cb;
+    font-weight: bold;
+}
+
+.contact-form .form-field {
+    margin: 10px 0;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #004666;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fafafa;
+    transition: border 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0078d4;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 14px;
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background: #005fa3;
+}
+
+.submission-message {
+    margin-top: 0px;
+    color: rgb(31, 95, 159);
+    font-weight: bold;
+    text-align: center;
+}
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .contact-card {
+        max-width: 80%;
+        padding: 15px 20px;
+    }
+
+    .contact-header {
+        font-size: 1.75rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+
+/* Phones (<768px) */
+@media (max-width: 767px) {
+    .contact-card {
+        max-width: 90%;
+        padding: 20px 16px;
+    }
+
+    .contact-header {
+        font-size: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .submit-button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}

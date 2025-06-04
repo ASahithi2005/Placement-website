@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import principal from "../assets/people/principal.jpg";
-import tpohead from "../assets/people/tpo-head.jpg"
+import tpohead from "../assets/people/tpo-head.jpg";
 import "../Styles/tpo_messages.css"; // Updated CSS
 
 const messages = [
@@ -25,7 +25,7 @@ const messages = [
 const MessagesSection = () => {
   return (
     <section id="messages" className="messages-section">
-      <h2 className="messages-heading">Messages from TPO</h2>
+      <h2 className="messages-heading">Messages from TPO</h2>{" "}
       <div className="carousel-container">
         <Carousel
           showArrows={false}
@@ -36,6 +36,9 @@ const MessagesSection = () => {
           interval={5000}
           transitionTime={700}
           emulateTouch={true}
+          centerMode={false}
+          centerSlidePercentage={100}
+          width="100%"
         >
           {messages.map((message, index) => (
             <div key={index} className="message-card">

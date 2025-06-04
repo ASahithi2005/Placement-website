@@ -5,7 +5,7 @@ import "../Styles/Timeline.css"; // Import the CSS file
 
 
 const timelineEvents = [
-    { date: "June 08, onwards", title: "Student Registrations", desc: "Students are instructed to register for the placements", icon: <Mail size={28} color="#007bff" /> },
+    { date: "May 22, onwards", title: "Student Registrations", desc: "Students are instructed to register for the placements", icon: <Mail size={28} color="#007bff" /> },
     { date: "June to September", title: "Product Based Companies", desc: "Product based companies conduct their hiring process during this time", icon: <FileText size={28} color="#007bff" /> },
     { date: "Oct to Dec", title: "Service Based Companies", desc: "Service based companies conduct their hiring process during this time", icon: <CheckCircle size={28} color="#007bff" /> },
     { date: "December onwards", title: "Core Companies", desc: "Hiring process for Core companies begins", icon: <Code size={28} color="#007bff" /> },
