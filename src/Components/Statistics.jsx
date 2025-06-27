@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Statistics.css';
-import img1 from '../assets/statistics/placement1.png';
-import img2 from '../assets/statistics/PercentageOFstu1.png';
+import img1 from '../assets/statistics/new1.jpg';
+import img2 from '../assets/statistics/new2.jpg';
 ; // Add your Word doc path here
 
 const Statistics = () => {
